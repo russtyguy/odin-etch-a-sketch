@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 300px;
+  border: 2px solid red;
+}
+
+.flex-grid {
+  display: flex;
+  gap: 1em;
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+}
