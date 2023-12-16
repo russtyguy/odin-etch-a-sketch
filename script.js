@@ -8,4 +8,4 @@ function makeSquares(num) {
   }
 }
 
-makeSquares(16);
+makeSquares(255);
