@@ -27,3 +27,7 @@
   aspect-ratio: 1/1;
   border: 1px solid black;
 }
+
+.square:hover {
+  background-color: black;
+}

@@ -1,11 +1,14 @@
 const squareGrid = document.querySelector(".container");
 
-function makeSquares(num) {
+function makeSquaresGrid(num) {
   for (let i = 0; i <= num; i++) {
     const square = document.createElement("div");
     square.setAttribute("class", "square");
+    square.addEventListener("mouseover", (e) => {
+      e.target.style.backgroundColor = "black";
+    });
     squareGrid.appendChild(square);
   }
 }
 
-makeSquares(255);
+makeSquaresGrid(255);
