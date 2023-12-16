@@ -13,7 +13,8 @@
 }
 
 .container {
-  max-width: 60svw;
+  width: 550px;
+  height: 550px;
   border: 2px solid red;
 }
 
@@ -23,11 +24,5 @@
 }
 
 .square {
-  flex-basis: 6.25%;
-  aspect-ratio: 1/1;
   border: 1px solid black;
-}
-
-.square:hover {
-  background-color: black;
 }

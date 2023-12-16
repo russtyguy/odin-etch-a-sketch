@@ -1,9 +1,11 @@
 const squareGrid = document.querySelector(".container");
+const btnCount = document.querySelector(".btn");
 
-function makeSquaresGrid(num) {
-  for (let i = 0; i <= num; i++) {
+function makeSquaresGrid(count) {
+  for (let i = 0; i < count * count; i++) {
     const square = document.createElement("div");
     square.setAttribute("class", "square");
+    square.style.flexBasis = `${100 / count}%`;
     square.addEventListener("mouseover", (e) => {
       e.target.style.backgroundColor = "black";
     });
@@ -11,4 +13,19 @@ function makeSquaresGrid(num) {
   }
 }
 
-makeSquaresGrid(255);
+makeSquaresGrid(16);
+
+function resetSquareGrid() {
+  while (squareGrid.firstChild) {
+    squareGrid.removeChild(squareGrid.firstChild);
+  }
+}
+
+btnCount.addEventListener("click", () => {
+  resetSquareGrid();
+  let count = prompt("How many square do you want in a row?(max 100)");
+  if (count > 100) {
+    count = 0;
+  }
+  makeSquaresGrid(+count);
+});
